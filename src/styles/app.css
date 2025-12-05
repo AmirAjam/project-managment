@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: "Vazirmatn-Bold";
+  src: url(/public/fonts/Vazirmatn-Bold.woff2);
+}
+
+@font-face {
+  font-family: "Vazirmatn-Regular";
+  src: url(/public/fonts/Vazirmatn-Medium.woff2);
+}
+
+@font-face {
+  font-family: "Vazirmatn-Medium";
+  src: url(/public/fonts/Vazirmatn-Regular.woff2);
+}
+
+@theme {
+  --font-Vazirmatn-Bold: "Vazirmatn-Bold";
+  --font-Vazirmatn-Regular: "Vazirmatn-Regular";
+  --font-Vazirmatn-Medium: "Vazirmatn-Medium";
+
+  --color-primary-color: #3366ca;
+  --color-bg-dark: #242a38;
+}
+
+@utility container {
+  @media (width >= 64rem) {
+    max-width: 84rem;
+  }
+  margin: 0 auto;
+  padding: 0 1rem;
+}
