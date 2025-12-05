@@ -4,14 +4,16 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { FaRegMoon } from "react-icons/fa";
 import { HiOutlineSun } from "react-icons/hi2";
+import { useThemeStore } from "@/store/theme.store";
 
 const Header = () => {
+  const { toggleTheme } = useThemeStore();
   return (
     <header className="py-3 border-b dark:border-gray-600 border-gray-300">
       <div className="container flex justify-between items-center">
         <Link to="/">Logo</Link>
         <div className="flex items-center gap-4">
-          <div className="cursor-pointer">
+          <div onClick={toggleTheme} className="cursor-pointer">
             <FaRegMoon className="block dark:hidden" />
             <HiOutlineSun className="text-2xl dark:block hidden" />
           </div>

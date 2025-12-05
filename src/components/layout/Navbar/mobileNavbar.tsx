@@ -7,13 +7,17 @@ const MobileNavbar = () => {
   const [cout, setCount] = useState(1);
 
   return (
-    <nav className="dark:bg-bg-dark fixed bottom-0 inset-x-0 h-14" dir="ltr">
+    <nav
+      className="dark:bg-bg-dark border-gray-300 border-t fixed bottom-0 inset-x-0 h-15
+       sm:hidden"
+      dir="ltr"
+    >
       <ul
         className={`flex justify-between items-center text-sm absolute bottom-0 inset-x-0 p-2 duration-500
-            ${cout !== 1 ? "-left-80 right-80" : "left-0"}`}
+            ${cout !== 1 ? "-left-155 right-155" : "left-0"}`}
       >
         {navbarItems.slice(0, 4).map((item) => (
-          <li key={item.link} className="flex items-center flex-col gap-0.5 ">
+          <li key={item.id} className="flex items-center flex-col gap-0.5 ">
             <item.icon size={18} />
             <Link to={item.link}>{item.title}</Link>
           </li>
@@ -29,7 +33,7 @@ const MobileNavbar = () => {
 
       <ul
         className={`flex justify-between items-center text-sm absolute bottom-0 inset-x-0 p-2 duration-500
-            ${cout !== 2 ? "left-80 -right-80" : "left-0"}`}
+            ${cout !== 2 ? "left-155 -right-155" : "left-0"}`}
       >
         <li
           onClick={() => setCount(1)}
@@ -39,7 +43,7 @@ const MobileNavbar = () => {
           <span className="mr-1">قبلی</span>
         </li>
         {navbarItems.slice(4, 8).map((item) => (
-          <li key={item.link} className="flex items-center flex-col gap-0.5">
+          <li key={item.id} className="flex items-center flex-col gap-0.5">
             <item.icon size={18} />
             <Link to={item.link}>{item.title}</Link>
           </li>
