@@ -22,7 +22,9 @@ const MobileNavbar = () => {
               to={item.link}
               className={({ isActive }) =>
                 `flex items-center flex-col gap-0.5 ${
-                  isActive ? "text-primary-color active" : "text-gray-500"
+                  isActive
+                    ? "text-primary-color active"
+                    : "text-gray-500 dark:text-gray-300"
                 }`
               }
             >

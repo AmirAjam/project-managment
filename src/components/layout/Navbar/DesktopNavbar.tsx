@@ -12,7 +12,9 @@ const DesktopNavbar = () => {
                 to={item.link}
                 className={({ isActive }) =>
                   `group flex flex-col items-center gap-0.5 ${
-                    isActive ? "text-primary-color active" : "text-gray-500"
+                    isActive
+                      ? "text-primary-color active"
+                      : "text-gray-500 dark:text-gray-300"
                   }`
                 }
               >
