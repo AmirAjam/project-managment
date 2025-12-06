@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <div className="container">
         <DesktopNavbar />
-        {children}
+        <div className="mt-14 mx-auto">{children}</div>
       </div>
       <MobileNavbar />
     </>

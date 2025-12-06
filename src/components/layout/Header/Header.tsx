@@ -9,7 +9,7 @@ import { useThemeStore } from "@/store/theme.store";
 const Header = () => {
   const { toggleTheme } = useThemeStore();
   return (
-    <header className="py-3 border-b dark:border-gray-600 border-gray-300 fixed inset-x-0">
+    <header className="py-3 border-b dark:border-gray-600 border-gray-300 fixed inset-x-0 top-0">
       <div className="container flex justify-between items-center">
         <Link to="/">Logo</Link>
         <div className="flex items-center gap-4">

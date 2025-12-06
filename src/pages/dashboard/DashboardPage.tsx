@@ -1,10 +1,11 @@
 import Layout from "@/components/layout/layout";
+import TodayDate from "./components/TodayDate";
 
 const DashboardPage = () => {
   return (
     <>
       <Layout>
-        <div className="h-500"></div>
+        <TodayDate />
       </Layout>
     </>
   );

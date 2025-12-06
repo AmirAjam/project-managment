@@ -4,7 +4,7 @@ import navbarItems from "./navbarItem";
 const DesktopNavbar = () => {
   return (
     <div className="">
-      <nav className="bg-dark w-fit inset-y-0 top-18 bottom-6 sm:block hidden py-3 fixed rounded-lg px-4 overflow-y-auto">
+      <nav className="dark:bg-dark bg-gray-200 w-fit inset-y-0 top-18 bottom-6 sm:block hidden py-3 fixed rounded-lg px-4 overflow-y-auto">
         <ul className="text-sm ">
           {navbarItems.map((item) => (
             <li className="mt-6 first:mt-0 relative">
