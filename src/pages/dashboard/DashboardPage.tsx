@@ -1,11 +1,11 @@
-import Header from "@/components/layout/Header/Header";
-import MobileNavbar from "@/components/layout/Navbar/mobileNavbar";
+import Layout from "@/components/layout/layout";
 
 const DashboardPage = () => {
   return (
     <>
-      <Header />
-      <MobileNavbar />
+      <Layout>
+        <div className="h-500"></div>
+      </Layout>
     </>
   );
 };

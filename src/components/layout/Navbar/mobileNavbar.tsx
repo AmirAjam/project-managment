@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import navbarItems from "./navbarItem";
 import { useState } from "react";
 import { HiOutlineChevronDoubleRight } from "react-icons/hi";
@@ -8,7 +8,7 @@ const MobileNavbar = () => {
 
   return (
     <nav
-      className="dark:bg-bg-dark border-gray-300 border-t fixed bottom-0 inset-x-0 h-15
+      className="dark:bg-dark dark:border-0 border-gray-300 border-t fixed bottom-0 inset-x-0 h-15
        sm:hidden"
       dir="ltr"
     >
@@ -17,9 +17,18 @@ const MobileNavbar = () => {
             ${cout !== 1 ? "-left-155 right-155" : "left-0"}`}
       >
         {navbarItems.slice(0, 4).map((item) => (
-          <li key={item.id} className="flex items-center flex-col gap-0.5 ">
-            <item.icon size={18} />
-            <Link to={item.link}>{item.title}</Link>
+          <li key={item.id} className=" ">
+            <NavLink
+              to={item.link}
+              className={({ isActive }) =>
+                `flex items-center flex-col gap-0.5 ${
+                  isActive ? "text-primary-color active" : "text-gray-500"
+                }`
+              }
+            >
+              <item.icon size={18} />
+              {item.title}
+            </NavLink>
           </li>
         ))}
         <li
@@ -43,9 +52,18 @@ const MobileNavbar = () => {
           <span className="mr-1">قبلی</span>
         </li>
         {navbarItems.slice(4, 8).map((item) => (
-          <li key={item.id} className="flex items-center flex-col gap-0.5">
-            <item.icon size={18} />
-            <Link to={item.link}>{item.title}</Link>
+          <li key={item.id}>
+            <NavLink
+              to={item.link}
+              className={({ isActive }) =>
+                `flex items-center flex-col gap-0.5 ${
+                  isActive ? "text-primary-color active" : "text-gray-500"
+                }`
+              }
+            >
+              <item.icon size={18} />
+              {item.title}
+            </NavLink>
           </li>
         ))}
       </ul>
