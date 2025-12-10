@@ -14,14 +14,14 @@ const Header = () => {
         <Link to="/">Logo</Link>
         <div className="flex items-center gap-4">
           <div onClick={toggleTheme} className="cursor-pointer">
-            <FaRegMoon className="block dark:hidden" />
-            <HiOutlineSun className="text-2xl dark:block hidden" />
+            <FaRegMoon className="block md:text-lg dark:hidden" />
+            <HiOutlineSun className="text-2xl md:text-3xl dark:block hidden" />
           </div>
           <div className="cursor-pointer">
-            <IoNotificationsOutline className="text-xl mt-0.5" />
+            <IoNotificationsOutline className="text-xl md:text-2xl mt-0.5" />
           </div>
           <div className="cursor-pointer">
-            <AiOutlineUser className="text-xl" />
+            <AiOutlineUser className="text-xl md:text-2xl" />
           </div>
         </div>
       </div>
