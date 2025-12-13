@@ -1,4 +1,4 @@
-import Layout from "@/components/layout/layout";
+import Layout from "@/components/layout/Layout";
 import TodayDate from "./components/TodayDate";
 import TodayStats from "./components/TodayStats";
 

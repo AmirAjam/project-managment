@@ -24,6 +24,7 @@
 
   --color-primary-color: #3366ca;
   --color-dark: #353535;
+  --color-dark-border: #4a4a4a;
 }
 
 @utility container {
