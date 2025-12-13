@@ -4,8 +4,9 @@ import {
   loginSchema,
   type LoginFormData,
 } from "@/features/auth/schema/login.schema";
-import { useForm, type FieldError } from "react-hook-form";
+import { useForm, type FieldErrors } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { errorToast } from "@/components/ui/CustomToast";
 
 const LoginFormItems = [
   {
@@ -34,8 +35,11 @@ const LoginForm = () => {
     console.log(data);
   };
 
-  const onError = (errors: FieldError<LoginFormData>) => {
-    console.log("Err => ", errors);
+  const onError = (errors: FieldErrors<LoginFormData>) => {
+    const firstErrorMessage =
+      Object.values(errors)[0]?.message ?? "خطای نامشخص";
+
+    errorToast(String(firstErrorMessage));
   };
 
   return (
