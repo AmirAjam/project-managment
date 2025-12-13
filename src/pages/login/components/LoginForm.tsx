@@ -53,7 +53,7 @@ const LoginForm = () => {
           autoFocus={index === 1 ? true : false}
         />
       ))}
-      <div className="mt-8 w-24">
+      <div className="mt-8 w-20">
         <PrimaryButton type="submit" text="ورود" />
       </div>
     </form>
